@@ -84,6 +84,7 @@ const App = () => (
       data={data}
       theme={theme}
       invertTheme
+      onToggle={() => console.info("Toggle")}
     />
     <br />
     <h3>Dark Theme</h3>
@@ -91,6 +92,7 @@ const App = () => (
       data={data}
       theme={theme}
       invertTheme={false}
+      onToggle={() => console.info("Toggle")}
     />
     <br />
     <h3>Hidden Root</h3>
@@ -98,6 +100,7 @@ const App = () => (
       data={data}
       theme={theme}
       hideRoot
+      onToggle={() => console.info("Toggle")}
     />
     <br />
     <h3>Base16 Greenscreen Theme</h3>
@@ -105,12 +108,14 @@ const App = () => (
       data={data}
       theme='greenscreen'
       invertTheme={false}
+      onToggle={() => console.info("Toggle")}
     />
     <h4>Inverted Theme</h4>
     <JSONTree
       data={data}
       theme='greenscreen'
       invertTheme
+      onToggle={() => console.info("Toggle")}
     />
     <br />
     <h3>Style Customization</h3>
@@ -130,6 +135,7 @@ const App = () => (
           valueLabel: getValueLabelStyle
         }}
         getItemString={getItemString}
+        onToggle={() => console.info("Toggle")}
       />
     </div>
     <h3>More Fine Grained Rendering</h3>
@@ -140,6 +146,7 @@ const App = () => (
         theme={theme}
         labelRenderer={([raw]) => <span>(({raw})):</span>}
         valueRenderer={raw => <em>😐 {raw} 😐</em>}
+        onToggle={() => console.info("Toggle")}
       />
     </div>
     <p>Sort object keys with <code>sortObjectKeys</code> prop.</p>
@@ -148,6 +155,7 @@ const App = () => (
         data={data}
         theme={theme}
         sortObjectKeys
+        onToggle={() => console.info("Toggle")}
       />
     </div>
     <p>Collapsed root node</p>
@@ -156,6 +164,7 @@ const App = () => (
         data={data}
         theme={theme}
         shouldExpandNode={() => false}
+        onToggle={() => console.info("Toggle")}
       />
     </div>
   </div>
