@@ -180,7 +180,8 @@ export default class JSONNestedNode extends React.Component {
   }
 
   handleClick = () => {
-    this.setState({ expanded: !this.state.expanded });
-    this.props.onToggle(this);
+    const isExpanded = !this.state.expanded;
+    this.setState({ expanded: isExpanded });
+    this.props.onToggle(isExpanded, this.props.keyPath, this.props.data, this.props.level);
   }
 }
